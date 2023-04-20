@@ -48,4 +48,5 @@ process.on('SIGTERM', function() {
 require('./bike');
 require('./car');
 require('./accessory')
+require('./scooter');
 require('./contact')

@@ -5,6 +5,7 @@ const ctrlAbout = require("../controllers/about");
 
 const ctrlBike = require("../controllers/bike");
 const ctrlCar = require("../controllers/car"); // import car controller
+const ctrlScooter = require("../controllers/scooter"); // import scooter controller
 const ctrlAccessory = require("../controllers/accessory");
 const ctrlContact = require("../controllers/contact");
 
@@ -52,6 +53,16 @@ router
   .get(ctrlAccessory.updateAccessory)
   .post(ctrlAccessory.doUpdateNewAccessory);
 router.get("/accessories/delete/:accessoryid", ctrlAccessory.deleteAccessory);
+
+// Scooter routes
+router.get("/scooters", ctrlScooter.scooterlists);
+router.get("/scooters/:scooterid", ctrlScooter.scooterInfo);
+router.route("/scooters/new").get(ctrlScooter.addNewScooter).post(ctrlScooter.doAddNewScooter);
+router
+  .route("/scooters/update/:scooterid")
+  .get(ctrlScooter.updateScooter)
+  .post(ctrlScooter.doUpdateNewScooter);
+router.get("/scooters/delete/:scooterid", ctrlScooter.deleteScooter);
 
 //Contact us
 router.get("/contactus", ctrlContact.showContactPage);

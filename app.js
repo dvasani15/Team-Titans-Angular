@@ -12,6 +12,7 @@ require("./app_server/models/db");
 
 const bikeRouter = require("./APP_API/routes/bike");
 const carRouter = require("./APP_API/routes/car");
+const scooterRouter = require('./APP_API/routes/scooter');
 const accessoryRouter = require("./APP_API/routes/accessory"); // import accessory router
 const contactRouter = require("./APP_API/routes/contact");
 
@@ -63,6 +64,7 @@ app.use("/users", usersRouter);
 app.use("/api", bikeRouter);
 app.use("/api", carRouter);
 app.use("/api", accessoryRouter); // use accessory router
+app.use('/api', scooterRouter);
 app.use("/api", contactRouter);
 
 // catch 404 and forward to error handler
