@@ -17,3 +17,4 @@
 <img width="1280" alt="image" src="https://user-images.githubusercontent.com/2765147/233239709-efebcfd5-c485-484d-9d79-0398312759bd.png">
 
 # Team-Titans-Angular
+# angular-project-titans
